@@ -1,22 +1,32 @@
-import { Container } from '@chakra-ui/react'
-import { Form, Title } from 'components'
+import { useData } from 'contexts'
 
-export const App: React.FC = () => (
-  <Container
-    h="100vh"
-    maxW="100%"
-    bgGradient="linear(to-b, orange.100, purple.100, purple.200, purple.300, purple.400)"
-  >
+import { Container } from '@chakra-ui/react'
+import {
+  Controller,
+  Form,
+  Title
+} from 'components'
+
+export const App: React.FC = () => {
+  const { loading } = useData()
+
+  return (
     <Container
-      h="100%"
-      maxW="container.sm"
-      py={ 5 }
-      display="flex"
-      justifyContent="center"
-      flexDirection="column"
+      h="100vh"
+      maxW="100%"
+      bgGradient="linear(to-b, orange.100, purple.100, purple.200, purple.300, purple.400)"
     >
-      <Title />
-      <Form />
+      <Container
+        h="100%"
+        maxW="container.md"
+        py={ 5 }
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <Title />
+        { loading ? <Controller /> : <Form /> }
+      </Container>
     </Container>
-  </Container>
-)
+  )
+}
