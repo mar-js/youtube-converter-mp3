@@ -3,7 +3,6 @@ import { FormEvent } from 'react'
 export type TLoading = 'processing' | 'fail' | 'ok'
 
 export interface IDataContextModel {
-  loading: TLoading | null;
   data: IData | null;
   handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }
@@ -22,10 +21,10 @@ export interface IAlert {
 }
 
 export interface IData {
-  duration: number;
-  link: string;
-  msg: TLoading;
-  progress: number;
-  status: string;
-  title: string;
+  duration?: number;
+  link?: string;
+  msg?: string;
+  progress?: number;
+  status: TLoading;
+  title?: string;
 }

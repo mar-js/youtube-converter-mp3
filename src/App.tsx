@@ -8,7 +8,7 @@ import {
 } from 'components'
 
 export const App: React.FC = () => {
-  const { loading } = useData()
+  const { data } = useData()
 
   return (
     <Container
@@ -25,7 +25,7 @@ export const App: React.FC = () => {
         flexDirection="column"
       >
         <Title />
-        { loading ? <Controller /> : <Form /> }
+        { data ? <Controller /> : <Form /> }
       </Container>
     </Container>
   )

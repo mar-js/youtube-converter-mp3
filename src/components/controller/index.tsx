@@ -7,15 +7,15 @@ import {
 } from 'components'
 
 export const Controller: React.FC = () => {
-  const { loading, data } = useData()
+  const { data } = useData()
 
   return (
     <>
-      { loading === 'processing' && <Loader /> }
+      { data?.status === 'processing' && <Loader /> }
 
-      { loading === 'fail' && <Alert msg={ data?.msg as string } /> }
+      { data?.status === 'fail' && <Alert msg={ data?.msg as string } /> }
 
-      { loading === 'ok' && <Download title={ data?.title as string } link={ data?.link as string } /> }
+      { data?.status === 'ok' && <Download title={ data?.title as string } link={ data?.link as string } /> }
     </>
   )
 }

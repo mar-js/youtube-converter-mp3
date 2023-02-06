@@ -6,52 +6,46 @@ import {
 
 import { DataContext } from 'contexts'
 
-import { getIdYoutube } from 'helpers'
+import { getIdYoutube, getValueForm } from 'helpers'
 
 import { convert } from 'apis'
 
-import {
-  IData,
-  IUrl,
-  TLoading
-} from 'interfaces'
+import { REGEX_YOUTUBE } from 'utils'
+
+import { IData } from 'interfaces'
 
 export const DataProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [ loading, setLoading ] = useState<TLoading | null>(null)
   const [ data, setData ] = useState<IData | null>(null)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
-    const TARGET = e.target as HTMLFormElement
-    const DATA = Object.fromEntries(new FormData(TARGET))
-    const { url } = DATA as unknown as IUrl
-    const REG = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm
+    const { url } = getValueForm(e)
 
-    if (!REG.test(url)) {
-      setLoading('fail')
+    if (!REGEX_YOUTUBE.test(url)) {
+      setData({ status: 'fail' })
 
       return
     }
 
-    setLoading('processing')
+    setData({ status: 'processing' })
 
     const YOUTUBE_ID = getIdYoutube(url) as string
 
     try {
       const DATA = await convert(YOUTUBE_ID) as unknown as IData
 
-      setLoading('ok')
+      console.log({ DATA })
+
       setData(DATA)
     } catch (error) {
       console.error('Error: ', error)
 
-      setLoading('fail')
+      setData({ status: 'fail' })
     }
   }
 
   const VALUE = {
-    loading,
     data,
     handleSubmit
   }
