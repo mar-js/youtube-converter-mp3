@@ -2,11 +2,11 @@ import { IData } from 'interfaces'
 
 export const convert = async (youtubeId: string): Promise<IData | Error> => {
   try {
-    const RESPONSE = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${youtubeId}`, {
+    const RESPONSE = await fetch(`${import.meta.env.VITE_API}?id=${youtubeId}`, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'd113bf2857mshf1bf82bbecd02d8p1e9d1djsn2f5b44680886',
-        'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
+        'X-RapidAPI-Key': `${import.meta.env.VITE_API_KEY}`,
+        'X-RapidAPI-Host': `${import.meta.env.VITE_API_HOST}`
       }
     })
     const DATA: IData = await RESPONSE.json()
