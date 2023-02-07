@@ -10,7 +10,7 @@ export const Download: React.FC<IDownload> = ({ title, link }) => (
   <Box w="100%" textAlign="center">
     <Heading
       as="h2"
-      mb={ 2 }
+      mb={ 3 }
       size="md"
     >{ title }</Heading>
     <Link
