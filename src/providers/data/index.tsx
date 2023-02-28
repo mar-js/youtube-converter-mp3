@@ -35,8 +35,6 @@ export const DataProvider: React.FC<PropsWithChildren> = ({ children }) => {
     try {
       const DATA = await convert(YOUTUBE_ID) as unknown as IData
 
-      console.log({ DATA })
-
       setData(DATA)
     } catch (error) {
       console.error('Error: ', error)
