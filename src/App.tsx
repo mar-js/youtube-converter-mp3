@@ -1,32 +1,27 @@
-import { useData } from 'contexts'
-
-import { Container } from '@chakra-ui/react'
-import {
-  Controller,
-  Form,
-  Title
-} from 'components'
+import { Controller } from "@components/Controller";
+import { Form } from "@components/Form";
+import { Title } from "@components/Title";
+import { useData } from "@contexts";
 
 export const App: React.FC = () => {
-  const { data } = useData()
+	const { data } = useData();
 
-  return (
-    <Container
-      h="100vh"
-      maxW="100%"
-      bgGradient="linear(to-b, orange.100, purple.100, purple.200, purple.300, purple.400)"
-    >
-      <Container
-        h="100%"
-        maxW="container.md"
-        py={ 5 }
-        display="flex"
-        justifyContent="center"
-        flexDirection="column"
-      >
-        <Title />
-        { data ? <Controller /> : <Form /> }
-      </Container>
-    </Container>
-  )
-}
+	return (
+		<main className="relative h-screen flex flex-col justify-center items-center bg-slate-600 text-center px-5">
+			<Title />
+			{data ? <Controller /> : <Form />}
+
+			<footer className="absolute bottom-5 text-white opacity-50">
+				@ Todos los derechos reservados |
+				<a
+					href="https://github.com/mar-js"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:underline"
+				>
+					mar-js
+				</a>
+			</footer>
+		</main>
+	);
+};
