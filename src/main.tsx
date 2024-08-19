@@ -1,4 +1,5 @@
 import { DataProvider } from "@providers";
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -10,6 +11,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 		<DataProvider>
 			<App />
 			<SpeedInsights />
+			<Analytics />
 		</DataProvider>
 	</React.StrictMode>,
 );
