@@ -1,7 +1,8 @@
-import { useData } from "contexts";
-
 import { Box } from "@chakra-ui/react";
-import { Alert, Download, Loader } from "components";
+import { Alert } from "@components/Alert";
+import { Download } from "@components/Download";
+import { Loader } from "@components/Loader";
+import { useData } from "@contexts";
 
 export const Controller: React.FC = () => {
 	const { data } = useData();

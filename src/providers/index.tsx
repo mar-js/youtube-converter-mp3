@@ -1,14 +1,10 @@
+import { convert } from "@apis/convert";
+import { DataContext } from "@contexts";
+import { getIdYoutube } from "@helpers/getIdYoutube";
+import { getValueForm } from "@helpers/getValueForm";
+import type { IData } from "@interfaces";
+import { REGEX_YOUTUBE } from "@utils/regexYoutube";
 import { type FormEvent, type PropsWithChildren, useState } from "react";
-
-import { DataContext } from "contexts";
-
-import { getIdYoutube, getValueForm } from "helpers";
-
-import { convert } from "apis";
-
-import { REGEX_YOUTUBE } from "utils";
-
-import type { IData } from "interfaces";
 
 export const DataProvider: React.FC<PropsWithChildren> = ({ children }) => {
 	const [data, setData] = useState<IData | null>(null);

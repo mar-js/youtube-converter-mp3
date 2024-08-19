@@ -1,6 +1,5 @@
-import type { IDownload } from "interfaces";
-
 import { Box, Heading, Link } from "@chakra-ui/react";
+import type { IDownload } from "@interfaces";
 
 export const Download: React.FC<IDownload> = ({ title, link }) => (
 	<Box w="100%" textAlign="center">

@@ -1,6 +1,5 @@
+import type { IDataContextModel } from "@interfaces";
 import { createContext, useContext } from "react";
-
-import type { IDataContextModel } from "interfaces";
 
 export const DataContext = createContext<IDataContextModel>(
 	{} as IDataContextModel,

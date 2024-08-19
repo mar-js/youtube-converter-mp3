@@ -1,4 +1,4 @@
-import type { IData } from "interfaces";
+import type { IData } from "@interfaces";
 
 export const convert = async (youtubeId: string): Promise<IData | Error> => {
 	try {

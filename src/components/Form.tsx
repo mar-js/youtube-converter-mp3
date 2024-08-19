@@ -1,6 +1,5 @@
-import { useData } from "contexts";
-
 import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { useData } from "@contexts";
 
 export const Form: React.FC = () => {
 	const { handleSubmit } = useData();

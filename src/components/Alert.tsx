@@ -1,5 +1,3 @@
-import type { IAlert } from "interfaces";
-
 import {
 	Alert as AlertCHUI,
 	AlertDescription,
@@ -8,6 +6,7 @@ import {
 	Button,
 	Link,
 } from "@chakra-ui/react";
+import type { IAlert } from "@interfaces";
 
 export const Alert: React.FC<IAlert> = ({ msg }) => (
 	<AlertCHUI status="error">
