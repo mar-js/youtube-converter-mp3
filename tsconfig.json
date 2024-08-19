@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@components": ["/components/*"],
-      "@apis": ["/apis/*"],
-      "@contexts": ["/contexts/index.tsx"],
-      "@providers": ["/providers/index.tsx"],
-      "@helpers": ["/helpers/*"],
-      "@utils": ["/utils/*"],
-      "@interfaces": ["/interfaces/index.ts"],
+      "@components/*": ["src/components/*"],
+      "@apis/*": ["src/apis/*"],
+      "@contexts": ["src/contexts/index.tsx"],
+      "@providers": ["src/providers/index.tsx"],
+      "@helpers/*": ["src/helpers/*"],
+      "@utils/*": ["src/utils/*"],
+      "@interfaces": ["src/interfaces/index.ts"],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
