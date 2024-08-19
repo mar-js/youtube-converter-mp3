@@ -7,9 +7,21 @@ export const App: React.FC = () => {
 	const { data } = useData();
 
 	return (
-		<main className="h-screen flex flex-col justify-center items-center bg-slate-600 text-center px-5">
+		<main className="relative h-screen flex flex-col justify-center items-center bg-slate-600 text-center px-5">
 			<Title />
 			{data ? <Controller /> : <Form />}
+
+			<footer className="absolute bottom-5 text-white opacity-50">
+				@ Todos los derechos reservados |
+				<a
+					href="https://github.com/mar-js"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:underline"
+				>
+					mar-js
+				</a>
+			</footer>
 		</main>
 	);
 };
