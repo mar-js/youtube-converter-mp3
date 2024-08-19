@@ -7,7 +7,7 @@ export const Controller: React.FC = () => {
 	const { data } = useData();
 
 	return (
-		<div>
+		<div className="w-96">
 			{data?.status === "processing" && <Loader />}
 
 			{data?.status === "fail" && <Alert msg={data?.msg as string} />}
