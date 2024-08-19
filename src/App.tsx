@@ -7,9 +7,9 @@ export const App: React.FC = () => {
 	const { data } = useData();
 
 	return (
-		<>
+		<main className="h-screen flex flex-col justify-center items-center bg-slate-600 text-center px-5">
 			<Title />
 			{data ? <Controller /> : <Form />}
-		</>
+		</main>
 	);
 };
