@@ -11,7 +11,7 @@ export const App: React.FC = () => {
 			<Title />
 			{data ? <Controller /> : <Form />}
 
-			<footer className="absolute bottom-5 text-white opacity-50">
+			<footer className="absolute bottom-5 flex justify-center items-center gap-1.5 text-white opacity-50">
 				@ Todos los derechos reservados |
 				<a
 					href="https://github.com/mar-js"
