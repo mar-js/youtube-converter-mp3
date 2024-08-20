@@ -1,7 +1,5 @@
 # Youtube Converter MP3
 
----
-
 ## Descripción:
 
 El proyecto lo que logra es: **descargar música de Youtube usando una URL**.
