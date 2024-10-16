@@ -1,4 +1,4 @@
 googleBot: crawl/true
 User-agent: *
 Allow: /
-Sitemap: https://youtube-converter-mp3.vercel.app/sitemap.txt
+Sitemap: https://youtube-converter-mp3.vercel.app/sitemap.xml
