@@ -1,5 +1,5 @@
 export const Title: React.FC = () => (
-	<h1 className="text-emerald-500 text-6xl sm:text-7xl mb-10">
-		Youtube Converter MP3
+	<h1 className="text-retro-brown-dark-one font-semibold text-5xl sm:text-6xl mb-10">
+		Youtube <br /> Converter MP3
 	</h1>
 );
