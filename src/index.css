@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-backgroundDark font-futuristic text-neonBlue min-h-screen;
+  background: #18181b;
+  background-image: radial-gradient(circle at 20% 20%, #00eaff22 0%, transparent 70%),
+    radial-gradient(circle at 80% 80%, #ff00cc22 0%, transparent 70%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-futuristic;
+  text-shadow: 0 0 8px #00eaff, 0 0 16px #ff00cc;
+}
+
+a {
+  @apply text-neonPink transition;
+  text-shadow: 0 0 6px #ff00cc;
+}
+
+button,
+.btn {
+  @apply bg-neonGreen text-backgroundDark font-futuristic shadow-neon px-6 py-3 rounded-lg transition;
+  text-shadow: 0 0 6px #39ff14;
+}
+
+input,
+textarea {
+  @apply bg-backgroundDark text-neonBlue border-neonPink border-2 rounded-lg px-4 py-2 focus:outline-none focus:border-neonBlue;
+  box-shadow: 0 0 8px #00eaff44;
+}
+
+hr {
+  border-color: #ff00cc;
+  box-shadow: 0 0 8px #ff00cc44;
+}
