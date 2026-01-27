@@ -7,22 +7,22 @@ export const App: React.FC = () => {
 	const { data } = useData();
 
 	return (
-		<main className="h-screen flex flex-col justify-center items-center bg-retro-brown-light-two text-center px-5">
-			<section className="bg-retro-brown-light-one p-5 rounded-lg outline outline-1 outline-retro-brown-dark-one mb-5">
+		<main className="min-h-screen flex flex-col justify-center items-center bg-backgroundDark text-center px-5 font-futuristic">
+			<section className="bg-gradient-to-br from-backgroundDark via-neonBlue/10 to-neonPink/10 p-8 rounded-2xl shadow-neon mb-8 border-2 border-neonPink backdrop-blur-md">
 				<Title />
 				{data ? <Controller /> : <Form />}
 			</section>
 
-			<footer className="flex flex-col justify-center items-center text-retro-brown-dark-two">
-				<span>
-					© {new Date().getFullYear()} Retro Converter | Todos los derechos
+			<footer className="flex flex-col justify-center items-center text-neonBlue mt-8">
+				<span className="text-neonGreen drop-shadow-[0_0_6px_#39ff14]">
+					© {new Date().getFullYear()} Futuristic Converter | Todos los derechos
 					reservados
 				</span>
 				<a
 					href="https://github.com/mar-js"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:underline"
+					className="hover:text-neonPink underline mt-2"
 				>
 					mar-js 🧑🏻‍💻
 				</a>
