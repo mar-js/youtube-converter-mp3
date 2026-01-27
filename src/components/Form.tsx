@@ -4,23 +4,27 @@ export const Form: React.FC = () => {
 	const { handleSubmit } = useData();
 
 	return (
-		<form onSubmit={handleSubmit} method="GET" className="flex flex-col gap-6">
+		<form
+			onSubmit={handleSubmit}
+			method="GET"
+			className="flex flex-col gap-6 items-center"
+		>
 			<label
 				htmlFor="url"
-				className="text-2xl font-light text-retro-brown-dark-one"
+				className="text-2xl font-futuristic text-neonBlue drop-shadow-[0_0_8px_#00eaff]"
 			>
 				Añade la URL de Youtube para convertirla en MP3.
 			</label>
-			<hr className="h-0.5 bg-retro-brown-dark-one" />
+			<hr className="h-0.5 w-full bg-neonPink" />
 			<input
 				type="text"
 				id="url"
 				name="url"
-				className="bg-retro-brown-light-two text-retro-brown-dark-one text-xl outline outline-1 outline-retro-brown-dark-one rounded-lg px-4 py-5"
+				className="w-full max-w-md text-xl font-futuristic px-4 py-5 border-2 border-neonBlue bg-backgroundDark text-neonGreen rounded-lg shadow-neonBlue focus:border-neonPink focus:shadow-neonPink transition"
 			/>
 			<button
 				type="submit"
-				className="flex justify-center items-center gap-2 text-xl font-semibold rounded-lg bg-retro-brown-dark-one text-retro-brown-light-two py-5 hover:bg-retro-brown-dark-two"
+				className="flex justify-center items-center gap-2 text-xl font-futuristic font-semibold rounded-lg bg-neonGreen text-backgroundDark py-5 px-8 shadow-neon hover:bg-neonPink hover:text-neonBlue hover:shadow-neonPink transition"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +44,7 @@ export const Form: React.FC = () => {
 				</svg>
 				Convertir a MP3
 			</button>
-			<p className="text-retro-brown-dark-one font-light text-lg">
+			<p className="text-neonPurple font-futuristic text-lg mt-2">
 				Soporta videos de hasta 2 horas de duración
 			</p>
 		</form>
